@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>javascript</li>
+        <li>java</li>
+        <li>python</li>
+        <li>django</li>
+    </ul>
+</body>
+
+<script>
+    var list = document.querySelectorAll("li")
+    for (var i=0; i<list.length; i++) {
+        list[i].addEventListener("click", function() {
+            console.log(i + "번째 리스트 입니다.")
+        })
+        // 위와 같이 작성하면 closure때문에 4번째라고만 뜬다.
+        // 계속 참조하게 된다.
+    }
+
+    for (let i=0; i<list.length; i++) {
+        list[i].addEventListener("click", function() {
+            console.log(i + "번째 리스트 입니다.")
+        })
+        // 위와 같이 작성하면 closure때문에 4번째라고만 뜬다.
+        // 계속 참조하게 된다.
+    }
+</script>
+
+</html>
