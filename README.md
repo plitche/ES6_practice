@@ -40,5 +40,75 @@ let double = (n) => n * 2;
 7. Promises(프로미스)
 8. Rest parameter and Spread operator(나머지 매개 변수 및 확산 연산자)
 9. Classes(클래스)
+비구조화를 통해 배열 또는 객체의 값을 새 변수에 더 쉽게 할당할 수 있습니다.  
+```js
+// ES5 문법
+const contacts = {
+	famillyName: '이',
+	name: '영희',
+	age: 22
+};
+
+let famillyName = contacts.famillyName;
+let name = contacts.name;
+let myAge = contacts.age;
+
+console.log(famillyName);
+console.log(name);
+console.log(age);
+// 출력
+// 이
+// 영희
+// 22
+```  
   
+```js
+// ES6 문법
+const contacts = {
+	famillyName: '이',
+	name: '영희',
+	age: 22
+};
+
+let { famillyName, name, age } = contacts;
+
+console.log(famillyName);
+console.log(name);
+console.log(age);
+// 출력
+// 이
+// 영희
+// 22
+```  
   
+ES5에서는 각 변수에 각 값을 할당해야합니다. ES6에서는 객체의 속성을 얻기 위해 값을 중괄호 안에 넣습니다.  
+> 속성 이름과 동일하지 않은 변수를 할당하면 undefined가 반환됩니다. 예를 들어, 속성의 이름이 name이고 username 변수에 할당하면 undefined를 반환합니다.  
+  
+우리는 항상 속성의 이름과 동일하게 변수 이름을 지정해야합니다. 그러나 변수의 이름을 바꾸려면 콜론을 :대신 사용할 수 있습니다.  
+  
+```
+// ES6 문법
+const contacts = {
+	famillyName: '이',
+	name: '영희',
+	age: 22
+};
+
+let { famillyName, name: ontherName, age } = contacts;
+
+console.log(ontherName);
+// 영희
+배열의 경우 객체와 동일한 구문을 사용합니다. 중괄호를 대괄호로 바꾸면됩니다.
+
+const arr = ['광희', '지수', '영철', 20];
+
+let [value1, value2, value3] = arr;
+
+console.log(value1);
+console.log(value2);
+console.log(value3);
+// 출력
+// 광희
+// 지수
+// 영철
+```  
