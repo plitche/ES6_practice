@@ -1,7 +1,7 @@
 # ES6_practice
 console.log(toString.call(변수)); //타입 확인 메소드  
 
-###목차
+## 목차
 1. const and let
 2. Arrow functions(화살표 함수)  
 3. Template Literals(템플릿 리터럴)  
@@ -12,7 +12,7 @@ console.log(toString.call(변수)); //타입 확인 메소드
 8. Rest parameter and Spread operator(나머지 매개 변수 및 확산 연산자)
 9. Classes(클래스)  
 ---  
-###2.Arrow functions(화살표 함수)  
+## 2.Arrow functions(화살표 함수)  
 
 화살표 함수는 javascript에서 함수를 정의하는 function 키워드 없이 함수를 만들 수 있으며,  
 return 키워드 없이, 식을 계산한 값이 자동으로 반환됩니다. () 안에 함수의 인자가 들어가고,  
@@ -43,7 +43,7 @@ console.log(myFunc(".dev")); // 출력 => 안녕 영희
 let double = (n) => n * 2;  
 ```  
   
-###9. Classes(클래스)  
+## 9. Classes(클래스)  
 비구조화를 통해 배열 또는 객체의 값을 새 변수에 더 쉽게 할당할 수 있습니다.  
 ```js
 // ES5 문법
