@@ -1,5 +1,5 @@
 # ES6_practice
-console.log(toString.call(변수));  
+console.log(toString.call(타입을 체크하고 싶은 값));  
 
 ## 목차
 1. const and let
