@@ -69,6 +69,21 @@ console.log(myFunc1('영희', 22));
 ```  
 문자열로 구성할 때 ES6의 리터럴 문자열은 ES5보다 더 체계적이고 잘 구성되어 있습니다.  
   
+## 4. Default parameters(기본 매개 변수)
+기존에는 함수의 매개변수에 초기화를 하려면 내부 작업이 필요했으나, ES6 에서는 필요 없어졌다.  
+```js
+// ES5
+function myFn(a, b) {
+  var a = a || 100;
+    var b = b || 200;
+  return a + b;
+}
+console.log(myFn(100)); // 300
+
+// ES6
+const myFn = (a = 100, b = 200) => a + b;
+console.log(myFn()); // 300
+```  
   
 ## 7. Promises(프로미스)
 자바스크립트에서 비동기 처리를 기존에는 콜백 함수를 사용한, 콜백 패턴을 사용하였다.  
