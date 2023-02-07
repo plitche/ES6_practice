@@ -1,9 +1,18 @@
 # ES6_practice
-console.log(toString.call(변수)); //타입 확인 메소드  
+console.log(toString.call(타입을 체크하고 싶은 값));  
 
+## 목차
 1. const and let
 2. Arrow functions(화살표 함수)  
 3. Template Literals(템플릿 리터럴)  
+4. Default parameters(기본 매개 변수)
+5. Array and object destructing(배열 및 객체 비구조화)
+6. Import and export(가져오기 및 내보내기)
+7. Promises(프로미스)
+8. Rest parameter and Spread operator(나머지 매개 변수 및 확산 연산자)
+9. Classes(클래스)  
+---  
+## 2.Arrow functions(화살표 함수)  
 
 화살표 함수는 javascript에서 함수를 정의하는 function 키워드 없이 함수를 만들 수 있으며,  
 return 키워드 없이, 식을 계산한 값이 자동으로 반환됩니다. () 안에 함수의 인자가 들어가고,  
@@ -34,12 +43,55 @@ console.log(myFunc(".dev")); // 출력 => 안녕 영희
 let double = (n) => n * 2;  
 ```  
   
-4. Default parameters(기본 매개 변수)
-5. Array and object destructing(배열 및 객체 비구조화)
-6. Import and export(가져오기 및 내보내기)
-7. Promises(프로미스)
-8. Rest parameter and Spread operator(나머지 매개 변수 및 확산 연산자)
-9. Classes(클래스)
+## 3. Template Literals(템플릿 리터럴)  
+문자열을 연결하기 위해 더하기(+) 연산자를 사용할 필요는 없으며, 백틱(`)을 사용하여 문자열 내에서 변수를 사용할 수도 있습니다.
+```js
+이전 문법:
+// ES5
+function myFunc1() {
+	return '안녕' + name + '너의 나이는' + age + '살 이다!'; 
+}
+
+console.log(myFunc1('영희', 22));
+// 출력 => 안녕 영희 너의 나이는 22살 이다!
+```  
+  
+```js
+새로운 ES6 문법 사용:
+
+// ES6
+const myFunc = (name, age) => {
+	return `안녕 ${name}, 너의 나이는 ${age}살 이다!`; 
+};
+
+console.log(myFunc1('영희', 22));
+// 출력 => 안녕 영희, 너의 나이는 22살 이다!
+```  
+문자열로 구성할 때 ES6의 리터럴 문자열은 ES5보다 더 체계적이고 잘 구성되어 있습니다.  
+  
+## 4. Default parameters(기본 매개 변수)
+기존에는 함수의 매개변수에 초기화를 하려면 내부 작업이 필요했으나, ES6 에서는 필요 없어졌다.  
+```js
+// ES5
+function myFn(a, b) {
+  var a = a || 100;
+    var b = b || 200;
+  return a + b;
+}
+console.log(myFn(100)); // 300
+
+// ES6
+const myFn = (a = 100, b = 200) => a + b;
+console.log(myFn()); // 300
+```  
+  
+## 7. Promises(프로미스)
+자바스크립트에서 비동기 처리를 기존에는 콜백 함수를 사용한, 콜백 패턴을 사용하였다.  
+결과론적으로, 콜백헬을 발생시켰다.  
+이를 해결하기 위해 프로미스가 도입되었고, 프로미스 후속처리 메소드를 이용해 에러 처리를 효과적으로 할 수 있게 되었다.  
+  
+  
+## 9. Classes(클래스)  
 비구조화를 통해 배열 또는 객체의 값을 새 변수에 더 쉽게 할당할 수 있습니다.  
 ```js
 // ES5 문법
