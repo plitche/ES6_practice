@@ -88,6 +88,29 @@ console.log(myFn(100)); // 300
 const myFn = (a = 100, b = 200) => a + b;
 console.log(myFn()); // 300
 ```  
+
+## 5. Array and object destructing(배열 및 객체 비구조화)
+구조분해 할당이란 펼치다란 뜻으로 객체나 배열에서 사용하며, 값을 해체한 후, 개별 값을 변수에 새로 할당하는 과정을 말한다.  
+  
+```js
+// 배열에서 Spread 사용
+const arr = [1, 2, 3];
+const [one, two, three] = arr;
+
+one // 1
+two // 2
+three // 3
+
+// 객체에서 Spread 사용
+const obj = {
+ firstName: '하나',
+ lastName: '몬'
+};
+
+const { firstName, lastName } = obj;
+firstName // 하나
+lastName // 몬
+```  
   
 ## 7. Promises(프로미스)
 자바스크립트에서 비동기 처리를 기존에는 콜백 함수를 사용한, 콜백 패턴을 사용하였다.  
