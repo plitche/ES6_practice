@@ -12,6 +12,10 @@ console.log(toString.call(타입을 체크하고 싶은 값));
 8. Rest parameter and Spread operator(나머지 매개 변수 및 확산 연산자)
 9. Classes(클래스)  
 ---  
+## 1. const and let
+블로스코프를 가지고 재선언 불가 재할당 가능한 let 변수 선언 키워드와 상수 선언 키원드 const가 추가되었다.  
+기존 var 키워드만 있었을 때 보다 예측 가능한 코드를 작성 할 수 있게 되었다.  
+
 ## 2.Arrow functions(화살표 함수)  
 
 화살표 함수는 javascript에서 함수를 정의하는 function 키워드 없이 함수를 만들 수 있으며,  
