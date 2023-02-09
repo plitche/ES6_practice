@@ -112,6 +112,39 @@ firstName // 하나
 lastName // 몬
 ```  
   
+## 6. Import and export(가져오기 및 내보내기)
+JavaScript 응용프로그램에서 import 및 export를 사용하면 성능이 향상됩니다. 이를 통해 별도의 재사용 가능한 구성요소를 작성할 수 있습니다.  
+JavaScript MVC 프레임워크에 익숙한 경우, 대부분의 경우 import 및 export를 사용하여 구성요소를 처리합니다. 그렇다면 실제로 어떻게 작동할까요?  
+간단합니다! export를 사용하면 다른 JavaScript 구성 요소에 사용할 모듈을 내보낼 수 있습니다.   
+우리는 그 모듈을 우리의 컴포넌트에 사용하기 위해 가져오기 import를 사용합니다.  
+  
+예를 들어, 두 개의 파일이 있습니다. 첫 번째 파일은 detailComponent.js이고 두 번째 파일은 homeComponent.js입니다.  
+detailComponent.js에서는 detail 함수를 내보낼 예정입니다.  
+
+```js
+// ES6
+export default function detail(name, age) {
+	return `안녕 ${name}, 너의 나이는 ${age}살 이다!`;
+}
+```  
+그리고 homeComponent.js에서 이 기능을 사용하려면 import만 사용합니다.  
+  
+```js
+import detail from './detailComponent';
+
+console.log(detail('영희', 20));
+// 출력 => 안녕 영희, 너의 나이는 20살 이다!
+```  
+둘 이상의 모듈을 가져오려는 경우, 중괄호에 넣기만 하면 됩니다.  
+  
+```js
+import { detail, userProfile, getPosts } from './detailComponent';
+
+console.log(detail('영희', 20));
+console.log(userProfile);
+console.log(getPosts);
+```  
+  
 ## 7. Promises(프로미스)
 자바스크립트에서 비동기 처리를 기존에는 콜백 함수를 사용한, 콜백 패턴을 사용하였다.  
 결과론적으로, 콜백헬을 발생시켰다.  
