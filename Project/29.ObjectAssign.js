@@ -17,8 +17,7 @@ console.log(myHealth)
 // 일반 Object안에 포함이 된것이 아니라 프로토타입 객체 안에 들어간 것이다.
 // 하지만 아쉬운 점은 Object의 클래스 변수들을 넣어줄때는 객체의 속성으로 들어가는데, 일일이 작성해주야 한다.
 
-// assign을 쓰면 조금더 쉽다.
-
+// assign을 쓰면 조금 더 쉽다.
 const myHealth2 = Object.assign(Object.create(healthObj), {
     name: "crong",
     lastTime: "11:20"
